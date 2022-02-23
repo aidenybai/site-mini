@@ -9,10 +9,6 @@
   width: 5rem;
   height: 5rem;
   border-radius: 100%;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
 }
 
 html {
@@ -31,6 +27,7 @@ body {
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
   display: flex;
+  padding: 0.75rem;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
@@ -42,10 +39,10 @@ body {
 }
 
 .container {
-  max-width: 40rem;
+  max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
@@ -96,13 +93,4 @@ strong {
 }
 code {
   font-family: 'Inter var', monospace;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
