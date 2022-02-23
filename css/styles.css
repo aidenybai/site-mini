@@ -1,0 +1,100 @@
+@import url('../fonts/inter.css');
+
+::selection {
+  background: #717f962c;
+  color: #000;
+}
+
+.headshot {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  line-height: 1.15;
+}
+
+body {
+  font-family: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-feature-settings: 'case' 1, 'cpsp' 1, 'dlig' 1, 'cv01' 1, 'cv02',
+    'cv03' 1, 'cv04' 1;
+  font-variation-settings: 'wght' 400;
+  font-variant: common-ligatures contextual;
+  letter-spacing: -0.02em;
+  display: flex;
+}
+
+@media screen and (min-device-pixel-ratio: 1.5),
+  screen and (min-resolution: 1.5dppx) {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.container {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+a {
+  text-underline-position: from-font;
+  text-decoration-skip-ink: all;
+  text-decoration-color: #a5adb1;
+  text-underline-offset: -1px;
+  text-decoration-line: underline;
+  text-decoration-thickness: from-font;
+  transition: all 0.2s ease;
+  color: #000;
+  text-decoration-style: solid;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter var', sans-serif;
+  font-variation-settings: 'wght' 600;
+}
+h2 {
+  font-family: 'Inter var', sans-serif;
+  font-variation-settings: 'wght' 650;
+  letter-spacing: -0.024rem;
+}
+h1 {
+  font-family: 'Inter var', sans-serif;
+  font-variation-settings: 'wght' 700;
+  font-size: 2rem;
+  margin-bottom: 0.4em;
+}
+p {
+  font-size: 1.2rem;
+}
+b,
+strong {
+  font-variation-settings: 'wght' 680;
+}
+code {
+  font-family: 'Inter var', monospace;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
