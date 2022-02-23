@@ -5,6 +5,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vite": "^2.8.4"
+    "vite": "^2.8.4",
+    "vite-plugin-singlefile": "^0.6.3"
   }
 }
