@@ -28,6 +28,7 @@ body {
   letter-spacing: -0.02em;
   display: flex;
   padding: 0.75rem;
+  background: #fff0e6;
 }
 
 @media screen and (min-device-pixel-ratio: 1.5),
@@ -49,7 +50,7 @@ body {
 a {
   text-underline-position: from-font;
   text-decoration-skip-ink: all;
-  text-decoration-color: #a5adb1;
+  text-decoration-color: #9a5337;
   text-underline-offset: -1px;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
@@ -93,4 +94,5 @@ strong {
 }
 code {
   font-family: 'Inter var', monospace;
+  font-variation-settings: 'wght' 600;
 }

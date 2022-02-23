@@ -1,18 +1,18 @@
 import { defineConfig } from 'vite';
-import { viteSingleFile } from 'vite-plugin-singlefile';
+import { viteSingleFile } from './singlefile';
 
 export default defineConfig({
   plugins: [viteSingleFile()],
   build: {
     target: 'esnext',
-    assetsInlineLimit: 100000000,
-    chunkSizeWarningLimit: 100000000,
+    assetsInlineLimit: Number.MAX_SAFE_INTEGER,
+    chunkSizeWarningLimit: Number.MAX_SAFE_INTEGER,
     cssCodeSplit: false,
     brotliSize: false,
     rollupOptions: {
       inlineDynamicImports: true,
       output: {
-        manualChunks: () => 'everything.js',
+        manualChunks: () => 'index.js',
       },
     },
   },
