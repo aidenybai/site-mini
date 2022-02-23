@@ -46,6 +46,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 a {
@@ -66,11 +67,13 @@ h5,
 h6 {
   font-family: 'Inter var', sans-serif;
   font-variation-settings: 'wght' 600;
+  margin-top: 2rem;
 }
 h2 {
   font-family: 'Inter var', sans-serif;
   font-variation-settings: 'wght' 650;
   letter-spacing: -0.024rem;
+  margin-top: 2rem;
 }
 h1 {
   font-family: 'Inter var', sans-serif;
@@ -80,7 +83,12 @@ h1 {
 }
 p {
   font-size: 1.2rem;
-  line-height: 1.15;
+  line-height: 1.5;
+}
+.footer {
+  margin-top: 3.5rem;
+  font-size: 0.9rem;
+  padding-left: auto;
 }
 b,
 strong {
