@@ -1,19 +1,7 @@
 import { defineConfig } from 'vite';
-import { viteSingleFile } from './singlefile';
+import { VitePWA } from 'vite-plugin-pwa';
+import compress from 'vite-plugin-compress';
 
 export default defineConfig({
-  plugins: [viteSingleFile()],
-  build: {
-    target: 'esnext',
-    assetsInlineLimit: Number.MAX_SAFE_INTEGER,
-    chunkSizeWarningLimit: Number.MAX_SAFE_INTEGER,
-    cssCodeSplit: false,
-    brotliSize: false,
-    rollupOptions: {
-      inlineDynamicImports: true,
-      output: {
-        manualChunks: () => 'index.js',
-      },
-    },
-  },
+  plugins: [compress(), VitePWA()],
 });
