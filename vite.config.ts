@@ -3,5 +3,5 @@ import { VitePWA } from 'vite-plugin-pwa';
 import compress from 'vite-plugin-compress';
 
 export default defineConfig({
-  plugins: [compress(), VitePWA()],
+  plugins: [compress({ brotli: false }), VitePWA()],
 });
