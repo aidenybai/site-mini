@@ -5,7 +5,7 @@
   "redirects": [
     {
       "source": "/work/million-js",
-      "destination": "https://million.js.org/research",
+      "destination": "https://millionjs.org/research",
       "permanent": true
     }
   ]
