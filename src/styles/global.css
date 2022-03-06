@@ -1,4 +1,4 @@
-@import url('../fonts/inter.css');
+@import url('../../public/fonts/inter.css');
 
 ::selection {
   background: #717f962c;
@@ -41,7 +41,7 @@ body {
 }
 
 .container {
-  max-width: 50rem;
+  max-width: 45rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;

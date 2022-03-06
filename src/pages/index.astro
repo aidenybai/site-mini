@@ -1,3 +1,6 @@
+---
+import Age from '../components/Age.svelte'
+---
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +13,15 @@
     />
     <meta name="author" content="Aiden Bai" />
 
-    <link id="favicon" rel="shortcut icon" href="./img/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
-
+    <link id="favicon" rel="shortcut icon" href="../../public/img/favicon.png" />
+    <style global>
+			@import "../styles/global.css";
+		</style>
     <title>Aiden Bai</title>
   </head>
   <body>
     <div class="container">
-      <img alt="Headshot" class="headshot" src="./img/favicon.png" />
+      <img alt="headshot" class="headshot" src="./img/favicon.png" />
       <h1>Aiden Bai</h1>
       <p>
         <a href="mailto:aiden.bai05@gmail.com"><code>@</code></a> ·
@@ -30,7 +34,7 @@
         >
       </p>
       <p>
-        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <code id="age">17</code> y/o from
+        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age /> y/o from
         Washington State passionate about <strong>HCI research</strong> and
         <strong>open source</strong>.
       </p>
@@ -94,7 +98,5 @@
         </span>
       </p>
     </div>
-
-    <script src="./js/index.ts" type="module"></script>
   </body>
 </html>
