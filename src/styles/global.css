@@ -1,6 +1,19 @@
-@import url('../../public/fonts/inter.css');
-
-::selection {
+@font-face {
+  font-family: 'Inter var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Inter var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/Inter-italic.latin.var.woff2) format('woff2');
+  font-named-instance: 'Italic';
+}
+a ::selection {
   background: #717f962c;
   color: #000;
 }
@@ -103,6 +116,6 @@ strong {
   font-variation-settings: 'wght' 680;
 }
 code {
-  font-family: 'Inter var', monospace;
-  font-variation-settings: 'wght' 600;
+  font-family: 'Inter var', sans-serif;
+  font-variation-settings: 'wght' 680;
 }
