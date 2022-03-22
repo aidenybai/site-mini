@@ -1,5 +1,9 @@
 ---
-import Age from '../components/Age.svelte'
+import Age from '../components/Age.svelte';
+import { lanyard } from '../components/Lanyard.js';
+
+const data = await lanyard({ userId: '400835140458250241' });
+const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}` : '🎶 Not listening to anything';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -21,8 +25,12 @@ import Age from '../components/Age.svelte'
   </head>
   <body>
     <div class="container">
-      <img alt="headshot" class="headshot" src="./img/favicon.png" />
-      <h1>Aiden Bai</h1>
+      <h2 class="header"><img alt="headshot" class="headshot" src="./img/favicon.png" /> Aiden Bai</h2>
+      <p>
+        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age client:load /> y/o from
+        Washington State passionate about <strong>HCI research</strong> and
+        <strong>open source</strong>.
+      </p>
       <p>
         <a href="mailto:aiden.bai05@gmail.com"><strong>@</strong></a> ·
         <a href="https://github.com/sponsors/aidenybai"><strong>$</strong></a> ·
@@ -33,12 +41,7 @@ import Age from '../components/Age.svelte'
           ><strong>/resume</strong></a
         >
       </p>
-      <p>
-        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age client:load /> y/o from
-        Washington State passionate about <strong>HCI research</strong> and
-        <strong>open source</strong>.
-      </p>
-      <h2>Present</h2>
+      <h3>Present</h3>
       <p>
         Right now, I'm exploring the <strong>next generation</strong> of Virtual DOM with
         <a href="https://millionjs.org"><strong>🦁 Million.js</strong></a
@@ -52,7 +55,7 @@ import Age from '../components/Age.svelte'
         ecosystem and learn more about the bleeding <em>edge</em> of web
         development.
       </p>
-      <h2>Previously</h2>
+      <h3>Previously</h3>
       <p>
         I won the <strong>2nd place</strong> grand award in Systems Software at
         the
@@ -76,16 +79,6 @@ import Age from '../components/Age.svelte'
         <strong>30+ schools, 40+ teachers and 1k+ students</strong>, throughout
         2020 and 2021.
       </p>
-      <h2>🎶🎸🤠</h2>
-      <p>
-        I like blasting music with my windows down on the highway (<em
-          >88rising ( ´Д`)ﾉ</em
-        >), design, poetry, cycling, and binging boba popsicles. My favorite
-        song is
-        <a href="https://www.youtube.com/watch?v=uSkd4NC1kqY"
-          ><em>sunkissed</em> · khai dreams</a
-        >.
-      </p>
       <p class="footer">
         <span>
           <abbr
@@ -94,6 +87,7 @@ import Age from '../components/Age.svelte'
           >
           by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
         </span>
+        <span class="spotify">{listening}</span>
       </p>
     </div>
   </body>

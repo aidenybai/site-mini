@@ -4,7 +4,11 @@ specifiers:
   '@astrojs/renderer-svelte': ^0.5.1
   astro: ^0.23.7
   svelte: ^3.46.4
+  svelte-lanyard: ^1.0.2
   vite: ^2.8.6
+
+dependencies:
+  svelte-lanyard: 1.0.2
 
 devDependencies:
   '@astrojs/renderer-svelte': 0.5.1_vite@2.8.6
@@ -3176,6 +3180,10 @@ packages:
     dependencies:
       svelte: 3.46.4
     dev: true
+
+  /svelte-lanyard/1.0.2:
+    resolution: {integrity: sha512-JxXHaTkIyDE7BAg6PHP/QP9qsqYcQO/SOmCokb6rKfDHAKsn09XtRC8mBcLKjaqDG/MVSONCaQSsXi85hUhWCQ==}
+    dev: false
 
   /svelte-preprocess/4.10.4_2116a3e496cd2f4fda353e8bc2715a5d:
     resolution: {integrity: sha512-fuwol0N4UoHsNQolLFbMqWivqcJ9N0vfWO9IuPAiX/5okfoGXURyJ6nECbuEIv0nU3M8Xe2I1ONNje2buk7l6A==}

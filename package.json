@@ -11,5 +11,8 @@
     "astro": "^0.23.7",
     "svelte": "^3.46.4",
     "vite": "^2.8.6"
+  },
+  "dependencies": {
+    "svelte-lanyard": "^1.0.2"
   }
 }
