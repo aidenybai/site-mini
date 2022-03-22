@@ -3,7 +3,7 @@ import Age from '../components/Age.svelte';
 import { lanyard } from '../components/Lanyard.js';
 
 const data = await lanyard({ userId: '400835140458250241' });
-const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}` : '🎶 Not listening to anything';
+const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}` : '🎶';
 ---
 <!DOCTYPE html>
 <html lang="en">
