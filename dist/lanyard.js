@@ -4,7 +4,7 @@ const CONSTANTS = {
   HEARTBEAT_PERIOD: 1000 * 30,
 };
 
-export async function lanyard(opts) {
+async function lanyard(opts) {
   if (!opts) throw new Error('Specify an options object');
   if (!opts.userId) throw new Error('Specify a user ID');
 
