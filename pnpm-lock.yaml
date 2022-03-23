@@ -3,12 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   '@astrojs/renderer-svelte': ^0.5.1
   astro: ^0.23.7
+  million: ^1.6.1
   svelte: ^3.46.4
-  svelte-lanyard: ^1.0.2
   vite: ^2.8.6
 
 dependencies:
-  svelte-lanyard: 1.0.2
+  million: 1.6.1
 
 devDependencies:
   '@astrojs/renderer-svelte': 0.5.1_vite@2.8.6
@@ -2556,6 +2556,10 @@ packages:
     resolution: {integrity: sha512-pDEgWjUoCMBwME8z8UiCOO6FKH0It1LASFh8hFSk8uSyfyw6rqY4PBk2LiIEPaVHwtLDhozp4Pr0I+yAUfCpiA==}
     dev: true
 
+  /million/1.6.1:
+    resolution: {integrity: sha512-8y88ylFC//ZDqpQPEXMw60z43WkwKRJ7llkGPb0mLcTqpUzrwiID2iKYWfLHd+84iVjtB114zAd2fw8uxQEPSQ==}
+    dev: false
+
   /mime/1.6.0:
     resolution: {integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==}
     engines: {node: '>=4'}
@@ -3180,10 +3184,6 @@ packages:
     dependencies:
       svelte: 3.46.4
     dev: true
-
-  /svelte-lanyard/1.0.2:
-    resolution: {integrity: sha512-JxXHaTkIyDE7BAg6PHP/QP9qsqYcQO/SOmCokb6rKfDHAKsn09XtRC8mBcLKjaqDG/MVSONCaQSsXi85hUhWCQ==}
-    dev: false
 
   /svelte-preprocess/4.10.4_2116a3e496cd2f4fda353e8bc2715a5d:
     resolution: {integrity: sha512-fuwol0N4UoHsNQolLFbMqWivqcJ9N0vfWO9IuPAiX/5okfoGXURyJ6nECbuEIv0nU3M8Xe2I1ONNje2buk7l6A==}

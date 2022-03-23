@@ -1,9 +1,5 @@
 ---
 import Age from '../components/Age.svelte';
-import { lanyard } from '../components/Lanyard.js';
-
-const data = await lanyard({ userId: '400835140458250241' });
-const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}` : '🎶';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -19,23 +15,29 @@ const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotif
 
     <link id="favicon" rel="shortcut icon" href="/img/favicon.png" />
     <style global>
-			@import "../styles/global.css";
-		</style>
+      @import '../styles/global.css';
+    </style>
     <title>Aiden Bai</title>
   </head>
   <body>
     <div class="container">
-      <h2 class="header"><img alt="headshot" class="headshot" src="./img/favicon.png" /> Aiden Bai</h2>
+      <h2 class="header">
+        <img alt="headshot" class="headshot" src="./img/favicon.png" /> Aiden
+        Bai
+      </h2>
       <p>
-        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age client:load /> y/o from
-        Washington State passionate about <strong>HCI research</strong> and
+        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age client:visible /> y/o from Washington
+        State passionate about <strong>HCI research</strong> and
         <strong>open source</strong>.
       </p>
       <p>
         <a href="mailto:aiden.bai05@gmail.com"><strong>@</strong></a> ·
         <a href="https://github.com/sponsors/aidenybai"><strong>$</strong></a> ·
         <a href="https://github.com/aidenybai"><strong>/github</strong></a> ·
-        <a href="https://linkedin.com/in/aidenbai"><strong>/linkedin</strong></a> ·
+        <a href="https://linkedin.com/in/aidenbai"
+          ><strong>/linkedin</strong></a
+        >
+        ·
         <a
           href="https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1"
           ><strong>/resume</strong></a
@@ -43,7 +45,8 @@ const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotif
       </p>
       <h3>Present</h3>
       <p>
-        Right now, I'm exploring the <strong>next generation</strong> of Virtual DOM with
+        Right now, I'm exploring the <strong>next generation</strong> of Virtual
+        DOM with
         <a href="https://millionjs.org"><strong>🦁 Million.js</strong></a
         >.
       </p>
@@ -87,8 +90,32 @@ const listening = data.listening_to_spotify ? `🎶 <a href="https://open.spotif
           >
           by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
         </span>
-        <span class="spotify">{listening}</span>
+        <span class="spotify">🎶</span>
       </p>
     </div>
+
+    <script hoist type="module">
+      import { lanyard } from '../scripts/lanyard.js';
+      import { render } from 'million';
+      import { html } from 'million/html';
+
+      const update = (data) => {
+        const el = document.querySelector('.spotify');
+        if (data.listening_to_spotify) {
+          render(el, html`<span>🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}</span>`);
+        } else {
+          render(el, html`<span>🎶</span>`);
+        }
+      };
+
+
+      lanyard({
+        userId: '400835140458250241',
+        socket: true,
+        onPresenceUpdate: (data) => {
+          update(data);
+        },
+      });
+    </script>
   </body>
 </html>
