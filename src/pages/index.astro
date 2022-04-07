@@ -48,14 +48,14 @@ import Age from '../components/Age.svelte';
       <p>
         Right now, I'm exploring the <strong>next generation</strong> of Virtual
         DOM with
-        <a href="https://millionjs.org"><strong>🦁 Million.js</strong></a
+        <a target="_blank" href="https://millionjs.org"><strong>🦁 Million.js</strong></a
         >.
       </p>
       <p>
         In the summer of 2022, I'll be interning at
-        <a href="https://vercel.com"><strong>▲ Vercel</strong></a>
+        <a target="_blank" href="https://vercel.com"><strong>▲ Vercel</strong></a>
         to help work on projects in the
-        <a href="https://nextjs.org">Next.js</a>
+        <a target="_blank" href="https://nextjs.org">Next.js</a>
         ecosystem and learn more about the bleeding <em>edge</em> of web
         development.
       </p>
@@ -64,18 +64,19 @@ import Age from '../components/Age.svelte';
         I won the <strong>2nd place</strong> grand award in Systems Software at
         the
         <a
+          target="_blank"
           href="https://www.societyforscience.org/press-release/2021-regeneron-isef-grand-awards/#:~:text=SOFT031%20%E2%80%94%20Lucia%3A%20Creating,States%20of%20Americ"
           >2021 International Science and Engineering Fair (ISEF)</a
         >
         with
-        <a href="https://lucia.js.org"><strong>🙋‍♀️ Lucia.js</strong></a>
+        <a target="_blank" href="https://lucia.js.org"><strong>🙋‍♀️ Lucia.js</strong></a>
         out of <strong>1.8k+ students</strong> around the world.
       </p>
       <p>
         I pioneered
-        <a href="https://kbowl.aidenybai.com"><strong>🧠 KBowl</strong></a>
+        <a target="_blank" href="https://kbowl.aidenybai.com"><strong>🧠 KBowl</strong></a>
         (virtual
-        <a href="https://en.wikipedia.org/wiki/Knowledge_Bowl"
+        <a target="_blank" href="https://en.wikipedia.org/wiki/Knowledge_Bowl"
           >Knowledge Bowl</a
         >
         events) during the COVID-19 lockdown. I helped organize the K-12 leagues
@@ -109,7 +110,7 @@ import Age from '../components/Age.svelte';
       const update = (data) => {
         const el = document.querySelector('.spotify');
         if (data.listening_to_spotify) {
-          render(el, html`<span>🎶 <a href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}</span>`);
+          render(el, html`<span>🎶 <a target="_blank" href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}</span>`);
         } else {
           render(el, html`<span>🎶</span>`);
         }
