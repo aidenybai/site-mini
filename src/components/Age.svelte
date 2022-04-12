@@ -6,4 +6,4 @@
   }, 10)
 </script>
 
-<strong>{age}</strong>
+<strong class="mono">{age}</strong>
