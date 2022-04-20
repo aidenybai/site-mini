@@ -4,12 +4,15 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "cleanup": "prettier -w ."
   },
   "devDependencies": {
     "@astrojs/renderer-solid": "^0.4.2",
     "astro": "^0.23.7",
     "micromorph": "^0.2.1",
+    "prettier": "^2.6.2",
+    "prettier-plugin-astro": "^0.0.12",
     "solid": "^0.2.1",
     "vite": "^2.8.6"
   },
