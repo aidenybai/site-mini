@@ -76,7 +76,6 @@ a {
 }
 
 a:hover {
-  text-decoration: none;
   background: var(--highlight);
   border-radius: 0.3rem;
 }
