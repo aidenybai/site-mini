@@ -1,5 +1,7 @@
 ---
-import Age from '../components/Age.svelte';
+import Age from '../components/Age.jsx';
+import favicon from '../../public/img/favicon.png';
+import boba from '../../public/img/boba.png';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,49 +15,53 @@ import Age from '../components/Age.svelte';
     />
     <meta name="author" content="Aiden Bai" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link id="favicon" rel="shortcut icon" href="/img/favicon.png" />
     <style global>
       @import '../styles/global.css';
     </style>
 
-    <title>Aiden Bai</title>
+    <title>Aiden Bai ✦</title>
   </head>
   <body>
     <div class="container">
       <h2 class="header">
-        <img alt="headshot" class="headshot" src="./img/favicon.png" /> Aiden
+        <img alt="headshot" class="headshot" src={favicon} loading="lazy" decoding="async" /> Aiden
         Bai 白宇彤
       </h2>
       <p>
-        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age client:visible /> y/o from Washington
+        ◕ ◡ ◕ っ Hi, I'm Aiden! I'm a <Age init={17} client:load /> y/o from Washington
         State passionate about <strong>HCI research</strong> and
         <strong>open source</strong>.
       </p>
       <p>
-        <a href="mailto:aiden.bai05@gmail.com"><strong>@</strong></a> ·
-        <a href="https://github.com/sponsors/aidenybai"><strong>$</strong></a> ·
-        <a href="https://github.com/aidenybai"><strong>/github</strong></a> ·
-        <a href="https://linkedin.com/in/aidenbai"
-          ><strong>/linkedin</strong></a
-        >
-        ·
-        <a
-          href="https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1"
-          ><strong>/resume</strong></a
-        >
+        <code>
+          <a href="mailto:aiden.bai05@gmail.com"><strong>Email</strong></a> ·
+          <a href="https://github.com/aidenybai"><strong>GitHub</strong></a> ·
+          <a href="https://linkedin.com/in/aidenbai"
+            ><strong>LinkedIn</strong></a
+          >
+          ·
+          <a
+            href="https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1"
+            ><strong>Resume</strong></a
+          >
+        </code>
       </p>
       <h3>Present</h3>
       <p>
         Right now, I'm exploring the <strong>next generation</strong> of Virtual
         DOM with
-        <a target="_blank" href="https://millionjs.org"><strong>🦁 Million.js</strong></a
+        <a target="_blank" rel="noopener noreferrer" href="https://millionjs.org"><strong>✦ Million.js</strong></a
         >.
       </p>
       <p>
         In the summer of 2022, I'll be interning at
-        <a target="_blank" href="https://vercel.com"><strong>▲ Vercel</strong></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://vercel.com"><strong>▲ Vercel</strong></a>
         to help work on projects in the
-        <a target="_blank" href="https://nextjs.org">Next.js</a>
+        <a target="_blank" rel="noopener noreferrer" href="https://nextjs.org">Next.js</a>
         ecosystem and learn more about the bleeding <em>edge</em> of web
         development.
       </p>
@@ -64,19 +70,19 @@ import Age from '../components/Age.svelte';
         I won the <strong>2nd place</strong> grand award in Systems Software at
         the
         <a
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
           href="https://www.societyforscience.org/press-release/2021-regeneron-isef-grand-awards/#:~:text=SOFT031%20%E2%80%94%20Lucia%3A%20Creating,States%20of%20Americ"
           >2021 International Science and Engineering Fair (ISEF)</a
         >
         with
-        <a target="_blank" href="https://lucia.js.org"><strong>🙋‍♀️ Lucia.js</strong></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://lucia.js.org"><strong>Lucia.js</strong></a>
         out of <strong>1.8k+ students</strong> around the world.
       </p>
       <p>
         I pioneered
-        <a target="_blank" href="https://kbowl.aidenybai.com"><strong>🧠 KBowl</strong></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://kbowl.aidenybai.com"><strong>KBowl</strong></a>
         (virtual
-        <a target="_blank" href="https://en.wikipedia.org/wiki/Knowledge_Bowl"
+        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Knowledge_Bowl"
           >Knowledge Bowl</a
         >
         events) during the COVID-19 lockdown. I helped organize the K-12 leagues
@@ -85,9 +91,13 @@ import Age from '../components/Age.svelte';
         2020 and 2021.
       </p>
 
-      <h3>Me</h3>
+      <h3>Fun</h3>
       <p>
-        I like blasting music with my windows down on the highway, design, poetry, cycling, and binging boba popsicles.
+        I like blasting music with my windows down on the highway while chugging fruit tea jelly boba.
+      </p>
+      <p>Here's what I look like:</p>
+      <p>
+        <img class="boba" src={boba} alt="boba" loading="lazy" decoding="async" />
       </p>
 
       <p class="footer">
@@ -98,32 +108,7 @@ import Age from '../components/Age.svelte';
           >
           by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
         </span>
-        <span class="spotify">🎶</span>
       </p>
     </div>
-
-    <script src="/lanyard.js"></script>
-    <script hoist type="module">
-      import { render } from 'million';
-      import { html } from 'million/html';
-
-      const update = (data) => {
-        const el = document.querySelector('.spotify');
-        if (data.listening_to_spotify) {
-          render(el, html`<span>🎶 <a target="_blank" href="https://open.spotify.com/track/${data.spotify.track_id}"><strong>${data.spotify.song}</strong></a> – ${data.spotify.artist}</span>`);
-        } else {
-          render(el, html`<span>🎶</span>`);
-        }
-      };
-
-
-      lanyard({
-        userId: '400835140458250241',
-        socket: true,
-        onPresenceUpdate: (data) => {
-          update(data);
-        },
-      });
-    </script>
   </body>
 </html>

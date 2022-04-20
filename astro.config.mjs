@@ -3,5 +3,5 @@ export default /** @type {import('astro').AstroUserConfig} */ {
     site: 'https://aidenybai.com',
     sitemap: true,
   },
-  renderers: ['@astrojs/renderer-svelte'],
+  renderers: ['@astrojs/renderer-solid'],
 };
