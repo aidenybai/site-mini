@@ -29,7 +29,8 @@ body {
   color: var(--main);
 }
 
-p {
+p,
+summary {
   font-size: 1.25rem;
   letter-spacing: 0.01rem;
 }
