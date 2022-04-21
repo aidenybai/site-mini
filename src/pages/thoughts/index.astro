@@ -23,12 +23,13 @@ const oneDay = 24 * 60 * 60 * 1000;
 
 <Layout content={{ title: 'Thoughts', show: false }}>
   {posts.map(post => {
-    const diff = Math.abs(date.getTime() - post.date.getTime()) / oneDay;
+    const diff = Math.round(Math.abs(date.getTime() - post.date.getTime()) / oneDay);
+    const timescale = diff < 1 ? 'today' : diff < 2 ? 'yesterday' : diff + ' days ago';
     return (
       <div>
         <h3><a href={post.href} style={`color: ${stringToColor(post.title)}`}>{post.title}</a></h3>
         <p>
-          {post.description} <em class="fade">({Math.round(diff)} day ago)</em>
+          {post.description} <em class="fade" title={date.toLocaleDateString()}>({timescale})</em>
         </p>
       </div>
     );
