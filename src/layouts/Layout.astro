@@ -1,0 +1,58 @@
+---
+import Headshot from '../components/Headshot.jsx'
+const { content } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Student from Washington State passionate about HCI research and open source."
+    />
+    <meta name="author" content="Aiden Bai" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/img/favicon.png" />
+    <style is:global>
+      @import "../styles/global.css";
+    </style>
+
+    <title>{content.title}</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="header">
+        <Headshot img={content.img} item={false} init={content.title} />
+        {content.title}
+      </h2>
+
+      <article>
+        <p><slot /></p>
+      </article>
+
+      <p class="footer">
+        <span>
+          <abbr
+            title="This site and all its content are licensed under a MIT License."
+            >made w/ ♥</abbr
+          >
+          by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
+        </span>
+        <span class="home"><a onclick="history.back()">← go back</a></span>
+      </p>
+    </div>
+
+    <script>
+      import { router } from 'million/router';
+      router();
+    </script>
+  </body>
+</html>

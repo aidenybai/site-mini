@@ -85,6 +85,13 @@ a:hover {
   display: flex;
 }
 
+.item {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  border-radius: 100%;
+}
+
 .headshot {
   width: 3rem;
   height: 3rem;
@@ -95,6 +102,7 @@ a:hover {
 
 .container {
   max-width: 45rem;
+  width: 45rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2rem;
@@ -111,4 +119,8 @@ a:hover {
   font-size: 0.9rem;
   padding-left: auto;
   display: flex;
+}
+
+.home {
+  margin-left: auto;
 }
