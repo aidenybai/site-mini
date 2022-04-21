@@ -31,4 +31,4 @@ I pioneered [KBowl](https://kbowl.aidenybai.com) (virtual [Knowledge Bowl](https
 
 ## Fun
 
-I like blasting music with my windows down on the highway, chugging fruit tea boba, and [**composing playful haikus**](/haiku) in my free time.
+I like blasting music with my windows down on the highway, chugging fruit tea boba, and [**composing my thoughts**](/thoughts) in my free time.

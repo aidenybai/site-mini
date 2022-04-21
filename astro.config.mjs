@@ -8,7 +8,7 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [],
     shikiConfig: {
-      theme: 'dracula',
+      theme: 'rose-pine-moon',
       wrap: true,
     },
   },

@@ -1,6 +1,13 @@
-export default function Headshot({ init, img, item }) {
+export default function Headshot({ init, img, show }) {
+  if (!show) return null;
   const color = stringToColor(init);
-  return img ? <img alt="image" class="headshot" src={img} loading="lazy" decoding="async" /> : <div class={item ? 'item' : 'headshot'} style={{ 'background-color': color }} />;
+  return img ? (
+    <img alt="image" class="headshot" src={img} loading="lazy" decoding="async" />
+  ) : (
+    <a href="/" class="headshot">
+      <div class="headshot" style={{ 'background-color': color }}></div>
+    </a>
+  );
 }
 
 const stringToColor = (str) => {

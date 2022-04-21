@@ -124,3 +124,12 @@ a:hover {
 .home {
   margin-left: auto;
 }
+
+.fade {
+  opacity: 0.5;
+}
+
+.astro-code {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}

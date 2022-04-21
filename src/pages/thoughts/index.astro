@@ -1,12 +1,12 @@
 ---
 import { parse, isBefore } from 'date-fns';
-import Headshot from '../../components/Headshot.jsx'
 import Layout from '../../layouts/Layout.astro';
 
 const posts = await Astro.glob('./*.md')
   .then(posts => posts
     .map(({ frontmatter, url }) => ({
       title: frontmatter.title,
+      description: frontmatter.description,
       date: parse(frontmatter.date, 'MMMM d, yyyy', new Date()),
       href: url
     }))
@@ -20,17 +20,16 @@ const date = new Date();
 const oneDay = 24 * 60 * 60 * 1000;
 ---
 
-<Layout content={{ title: 'Haiku' }}>
-  <ul>
-    {posts.map(post => {
-      const diff = Math.abs(date.getTime() - post.date.getTime()) / oneDay;
-      return (
-        <li>
-          <p>
-            <a href={post.href}><strong>{post.title}</strong> — <em>{Math.round(diff)} day ago</em></a>
-          </p>
-        </li>
-      );
-    })}
-  </ul>
+<Layout content={{ title: 'Thoughts' }}>
+  {posts.map(post => {
+    const diff = Math.abs(date.getTime() - post.date.getTime()) / oneDay;
+    return (
+      <div>
+        <h3><a href={post.href}>{post.title}</a></h3>
+        <p>
+          {post.description} <em class="fade">({Math.round(diff)} day ago)</em>
+        </p>
+      </div>
+    );
+  })}
 </Layout>
