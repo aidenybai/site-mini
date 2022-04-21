@@ -30,7 +30,7 @@ const { content } = Astro.props;
   <body>
     <div class="container">
       <h2 class="header">
-        <Headshot img={content.img} init={content.title} show={true} />
+        <Headshot img={content.img} init={content.title} show={content.show === undefined ? true : content.show} />
         {content.title}
       </h2>
 
