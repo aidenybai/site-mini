@@ -1,5 +1,4 @@
 ---
-import Headshot from '../components/Headshot.jsx'
 const { content } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -30,7 +29,9 @@ const { content } = Astro.props;
   <body>
     <div class="container">
       <h2 class="header">
-        <Headshot img={content.img} init={content.title} show={content.show === undefined ? true : content.show} />
+        <a href="/" class="headshot">
+          <img alt="image" class="headshot" src="/img/favicon.png" loading="lazy" decoding="async" />
+        </a>
         {content.title}
       </h2>
 
@@ -46,7 +47,7 @@ const { content } = Astro.props;
           >
           by <a class="email" href="mailto:aiden.bai05@gmail.com">Aiden Bai.</a>
         </span>
-        <span class="home"><a onclick="history.back()">← go back</a></span>
+        <span class="home"><a href="/">← go home</a></span>
       </p>
     </div>
 

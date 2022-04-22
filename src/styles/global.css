@@ -28,13 +28,15 @@ body {
 }
 
 p,
+li,
 summary {
   font-size: 1.25rem;
   letter-spacing: 0.01rem;
+  line-height: 2rem;
 }
 
 code {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-family: var(--mono);
 }
 
@@ -80,6 +82,26 @@ a:hover {
   border-radius: 0.3rem;
 }
 
+ol {
+  counter-reset: item;
+}
+
+ol li {
+  display: block;
+}
+
+ol li:before {
+  content: counter(item) '. ';
+  counter-increment: item;
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 20px 0 30px;
+  padding-left: 20px;
+  border-left: 5px solid var(--highlight);
+}
+
 .header {
   align-items: center;
   display: flex;
@@ -98,6 +120,11 @@ a:hover {
   flex-direction: row;
   margin: 0 0.5rem 0 0;
   border-radius: 100%;
+  animation: spin 4s ease-in-out infinite;
+}
+
+.headshot:hover {
+  animation-play-state: paused;
 }
 
 .container {
@@ -131,5 +158,12 @@ a:hover {
 
 .astro-code {
   padding: 1.5rem;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

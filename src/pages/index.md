@@ -10,7 +10,7 @@ layout: ../layouts/Layout.astro
 Washington State passionate about **HCI research** and
 open source.
 
-[**Email**](mailto:aiden.bai05@gmail.com) · [**GitHub**](https://github.com/aidenybai) · [**LinkedIn**](https://linkedin.com/in/aidenbai) · [**Resume**](https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1)
+[**Thoughts**](/thoughts) · [**Email**](mailto:aiden.bai05@gmail.com) · [**GitHub**](https://github.com/aidenybai) · [**LinkedIn**](https://linkedin.com/in/aidenbai) · [**Resume**](https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1)
 
 ### Present
 
@@ -31,4 +31,4 @@ I pioneered [**KBowl**](https://kbowl.aidenybai.com) (virtual [Knowledge Bowl](h
 
 ## More
 
-I like blasting music with my windows down on the highway, chugging fruit tea boba, and [**composing my thoughts**](/thoughts) in my free time.
+I like blasting music with my windows down on the highway, chugging fruit tea boba, and composing my [**thoughts**](/thoughts) in my free time.
