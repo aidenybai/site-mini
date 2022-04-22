@@ -45,7 +45,7 @@ However, we can recognize this can be cumbersome to write manually, especially w
 
 > **TL;DR**: The React authors created Virtual DOM to allow us to write UI in a way that is faster than `innerHTML` and just as declarative.
 
-### Understanding Virtual DOM
+### Understanding Virtual DOM <em class="fade">(part 1)</em>
 
 To best understand how Virtual DOM works, let's overview how Virtual DOM works and then build our own.
 
@@ -131,7 +131,7 @@ div.replaceChild(newChild, oldChild);
 
 With Virtual DOM, instead of replacing the whole UI, it only makes necessary changes.
 
-### Build Your Own Virtual DOM
+### Build Your Own Virtual DOM <em class="fade">(part 2)</em>
 
 In this exercise, we will mimic the [**✦ Million.js**](https://github.com/aidenybai/million) Virtual DOM API. Our API will consist of three main functions: `m`, `createElement`, and `patch`.
 
@@ -273,7 +273,7 @@ patch(el, oldVNode, newVNode);
 
 And we've finished our Virtual DOM! Check out the [live example here](https://codesandbox.io/s/virtual-dom-example-8nte0o).
 
-### Virtual DOM is Slower Than The DOM
+### Virtual DOM is Pure Overhead <em class="fade">(right now)</em>
 
 > _["Virtual DOM is pure overhead"](https://svelte.dev/blog/virtual-dom-is-pure-overhead) --Rich Harris, 2018_
 
@@ -291,6 +291,6 @@ Turns out, Tom Dale's bet was right. The JavaScript ecosystem has seen the rise 
 
 Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries inherently aren't designed for the use of compilers, and as a result, Virtual DOM render speeds are often slower than modern JavaScript UI libraries.
 
-If we want Virtual DOM to be used in the future, we need to redesign Virtual DOM to allow for compilation.
+If we want Virtual DOM to be used in the future, we need to redesign Virtual DOM to allow for compilation to reduce overhead.
 
 > **TL;DR**: The future of Virtual DOM is a compiler-augmented. Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already 2-3x faster than the current non-compiled Virtual DOM libraries.
