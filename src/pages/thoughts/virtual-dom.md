@@ -41,13 +41,13 @@ div.textContent = 'Hello World!';
 document.body.appendChild(div);
 ```
 
-However, we can recognize this can be cumbersome to write manually, especially when there is a lot of interativity in the UI, as we need to specify every step imperatively. Declarative UI is a much more elegant and simple way to write UI.
+However, we can recognize this can be cumbersome to write manually, especially when there is a lot of interativity in the UI, as we need to specify every step imperatively. It is much more elegant to write UI declaratively.
 
 > **TL;DR**: The React authors created Virtual DOM to allow us to write UI in a way that is faster to render than `innerHTML` and just as declarative.
 
 ### Understanding Virtual DOM <em class="fade">(part 1)</em>
 
-To best understand how Virtual DOM works, let's overview how Virtual DOM works and then build our own.
+To best understand how Virtual DOM works, let's overview the process and then build an example.
 
 The Virtual DOM is an method of rendering UI. The method utilizes a tree of JavaScript objects ("virtual" nodes) that mimics the DOM tree.
 
@@ -123,13 +123,13 @@ However, to make the Virtual DOM actually apply the change to the UI, we need to
 };
 ```
 
-Once we know the difference, the Virtual DOM can change the Virtual DOM:
+Once we know the difference, the Virtual DOM can change the UI:
 
 ```js
 div.replaceChild(newChild, oldChild);
 ```
 
-With Virtual DOM, instead of replacing the whole UI, it only makes necessary changes.
+Instead of replacing the whole UI, the Virtual DOM only makes necessary changes.
 
 ### Build Your Own Virtual DOM <em class="fade">(part 2)</em>
 
@@ -139,9 +139,9 @@ In this exercise, we will mimic the [**✦ Million.js**](https://github.com/aide
 
 The `m` function is a helper function that creates virtual nodes. A virtual node contains three properties:
 
-- `tag`: which stores the tag name of the element as a string.
-- `props`: which stores the properties/attributes of the element as an object.
-- `children`: which stores virtual node children of the element as an array.
+- `tag`: tag name of the virtual node as a string.
+- `props`: properties/attributes of the node as an object.
+- `children`: children of the virtual node as an array.
 
 An example implementation of the `m` helper function is below:
 
@@ -201,7 +201,7 @@ The `patch` function takes an existing DOM node, old virtual node, and new virtu
 
 The implementation is as follows:
 
-1. Calculate the difference between the two virtual nodes
+1. Calculate the difference between the two virtual nodes.
 2. If virtual node is a `string`, replace the text content of the DOM node with the new node.
 3. If virtual node is an `object`, update node if `tag`, `props`, or `children` are different.
 
@@ -281,16 +281,20 @@ In the present, Virtual DOM implementations incur computation cost when calculat
 
 Even with extremely efficient diffing algorithms (like [`list-diff2`](https://www.npmjs.com/package/list-diff2)), when virtual node trees become greater than double digits of virtual nodes, the [cost of diffing becomes significant](https://svelte.dev/blog/virtual-dom-is-pure-overhead).
 
+Tree diffing algorithms are notoriously slow. Time complexity can range from `O(n)` to `O(n^3)` depending on the complexity of the virtual node tree. This is a far cry from DOM manipulation, which is `O(1)` in most cases.
+
 ### Future of Virtual DOM
 
 > _["Compilers are the New Frameworks"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) --Tom Dale, 2017_
 
 In 2017, Tom Dale, the creator of [Ember](https://emberjs.com/), was one of the first open source zealots to advocate for the use of compilers for JavaScript UI libraries.
 
-In 2022, we now know Tom Dale's bet was spot on. The JavaScript ecosystem has seen the rise in ["compiled"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) libraries like [Solid](https://www.solidjs.com/) and [Svelte](https://svelte.dev/), which forgo the Virtual DOM. These libraries skip unnecessary rendering by using a compiler to prerender beforehand and only generate code on demand if it's needed.
+In 2022, we now know Tom Dale's bet was spot on. The JavaScript ecosystem has seen the rise in ["compiled"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) libraries like [Solid](https://www.solidjs.com/) and [Svelte](https://svelte.dev/), which forgo the Virtual DOM. These libraries skip unnecessary rendering by using a compiler to prerender beforehand and only generating code when used.
 
-Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries are inherently not compatable with a "on-demand" compiler. As a result, Virtual DOM render speeds are often **slower than modern "No Virtual DOM" UI libraries** by several magnitudes.
+Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries are inherently not compatible with a "on-demand" compiler. As a result, Virtual DOM render speeds are often **slower than modern "No Virtual DOM" UI libraries** by several magnitudes.
 
 If we want Virtual DOM to be competitive in render speeds in the future, we need to **redesign Virtual DOM to allow for compiler augmentation**.
 
-Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already [**2-3x faster**](https://millionjs.org/benchmarks/official-benchmarks) than the current non-compiled Virtual DOM libraries. We take a "on demand" and "reduction" approach, meaning we generate necessary code only and we've made API decisions to make it easy for a compiler to reduce unnecessary renders.
+#### ✦ Million.js
+
+Check out the current effort to bring compilers to Virtual DOM at [**✦ Million.js**](https://github.com/aidenybai/million). We're already [**2-3x faster**](https://millionjs.org/benchmarks/official-benchmarks) than the current non-compiled Virtual DOM libraries.
