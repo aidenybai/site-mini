@@ -33,7 +33,7 @@ This process is extremely computationally expensive and can cause render speeds 
 
 ### Imperative UI
 
-So, how is this issue fixed? Well, the other option is to use the DOM this approach is over [**3x faster**](https://jsben.ch/8PheY) than the `innerHTML` method.
+So, how is this issue fixed? Well, the other option is to use the DOM; this approach is over [**3x faster**](https://jsben.ch/8PheY) than the `innerHTML` method.
 
 ```js
 const div = document.createElement('div');

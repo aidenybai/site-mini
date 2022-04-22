@@ -1,8 +1,7 @@
 import { createSignal } from 'solid-js';
 
-const BIRTHDAY = new Date('Janurary 5, 2005').getTime();
-
 export default function Age({ init }) {
+  const BIRTHDAY = new Date('January 5, 2005').getTime();
   const [age, setAge] = createSignal(init);
   const [currInterval, setCurrInterval] = createSignal(null);
   const createInterval = () => {
@@ -13,7 +12,10 @@ export default function Age({ init }) {
   };
   setCurrInterval(createInterval());
   return (
-    <strong onMouseEnter={() => clearInterval(currInterval())} onMouseLeave={() => setCurrInterval(createInterval())}>
+    <strong
+      onMouseEnter={() => clearInterval(currInterval())}
+      onMouseLeave={() => setCurrInterval(createInterval())}
+    >
       <code>{age()}</code>
     </strong>
   );
