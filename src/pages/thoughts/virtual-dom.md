@@ -43,7 +43,7 @@ document.body.appendChild(div);
 
 However, we can recognize this can be cumbersome to write manually, especially when there is a lot of interativity in the UI, as we need to specify every step imperatively. Declarative UI is a much more elegant and simple way to write UI.
 
-> **TL;DR**: The React authors created Virtual DOM to allow us to write UI in a way that is faster than `innerHTML` and just as declarative.
+> **TL;DR**: The React authors created Virtual DOM to allow us to write UI in a way that is faster to render than `innerHTML` and just as declarative.
 
 ### Understanding Virtual DOM <em class="fade">(part 1)</em>
 
@@ -285,12 +285,12 @@ Even with extremely efficient diffing algorithms (like [`list-diff2`](https://ww
 
 > _["Compilers are the New Frameworks"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) --Tom Dale, 2017_
 
-Tom Dale, the creator of [Ember](https://emberjs.com/), was one of the first JavaScript UI library zealots to advocate for the use of compilers for JavaScript UI libraries.
+In 2017, Tom Dale, the creator of [Ember](https://emberjs.com/), was one of the first open source zealots to advocate for the use of compilers for JavaScript UI libraries.
 
-Turns out, Tom Dale's bet was right. The JavaScript ecosystem has seen the rise in no Virtual DOM ["compiled"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) libraries like [Solid](https://www.solidjs.com/) and [Svelte](https://svelte.dev/). These libraries skip unnecessary computation by using a compiler to perform work beforehand, reducing the amount of data that needs to be processed. The output of these compilers are progressively enhanced, meaning code is only generated if it's needed.
+In 2022, we now know Tom Dale's bet was spot on. The JavaScript ecosystem has seen the rise in ["compiled"](https://tomdale.net/2017/09/compilers-are-the-new-frameworks/) libraries like [Solid](https://www.solidjs.com/) and [Svelte](https://svelte.dev/), which forgo the Virtual DOM. These libraries skip unnecessary rendering by using a compiler to prerender beforehand and only generate code on demand if it's needed.
 
-Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries inherently aren't designed for the use of compilers, and as a result, Virtual DOM render speeds are often slower than modern JavaScript UI libraries.
+Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries are inherently not compatable with a "on-demand" compiler. As a result, Virtual DOM render speeds are often **slower than modern "No Virtual DOM" UI libraries** by several magnitudes.
 
-If we want Virtual DOM to be competitive in the future, we need to **redesign Virtual DOM to allow for compiler augmentation**.
+If we want Virtual DOM to be competitive in render speeds in the future, we need to **redesign Virtual DOM to allow for compiler augmentation**.
 
-Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already [**2-3x faster**](https://millionjs.org/benchmarks/official-benchmarks) than the current non-compiled Virtual DOM libraries.
+Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already [**2-3x faster**](https://millionjs.org/benchmarks/official-benchmarks) than the current non-compiled Virtual DOM libraries. We take a "on demand" and "reduction" approach, meaning we generate necessary code only and we've made API decisions to make it easy for a compiler to reduce unnecessary renders.
