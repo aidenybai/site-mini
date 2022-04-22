@@ -9,7 +9,7 @@ const { content } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Student from Washington State passionate about HCI research and open source."
+      content={content.description || 'Student from Washington State passionate about HCI research and open source.'}
     />
     <meta name="author" content="Aiden Bai" />
 
