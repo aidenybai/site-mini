@@ -133,7 +133,7 @@ With Virtual DOM, instead of replacing the whole UI, it only makes necessary cha
 
 ### Build Your Own Virtual DOM
 
-In this exercise, we will mimic the [**✦ Million.js**](https://github.com/aidenybai/million) Virtual DOM API. our API will consist of three main functions: `m`, `createElement`, and `patch`.
+In this exercise, we will mimic the [**✦ Million.js**](https://github.com/aidenybai/million) Virtual DOM API. Our API will consist of three main functions: `m`, `createElement`, and `patch`.
 
 #### `m(tag, props, children)`
 
@@ -293,4 +293,4 @@ Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM l
 
 If we want Virtual DOM to be used in the future, we need to redesign Virtual DOM to allow for compilation.
 
-> **TL;DR**: The future of Virtual DOM is a compiler-augmented. Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million).
+> **TL;DR**: The future of Virtual DOM is a compiler-augmented. Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already 2-3x faster than the current non-compiled Virtual DOM libraries.
