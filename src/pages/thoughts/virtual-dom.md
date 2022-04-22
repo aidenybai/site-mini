@@ -291,6 +291,6 @@ Turns out, Tom Dale's bet was right. The JavaScript ecosystem has seen the rise 
 
 Virtual DOM, on the other hand, lags behind on this trend. Current Virtual DOM libraries inherently aren't designed for the use of compilers, and as a result, Virtual DOM render speeds are often slower than modern JavaScript UI libraries.
 
-If we want Virtual DOM to be used in the future, we need to redesign Virtual DOM to allow for compilation to reduce overhead.
+If we want Virtual DOM to be competitive in the future, we need to **redesign Virtual DOM to allow for compiler augmentation**.
 
-> **TL;DR**: The future of Virtual DOM is a compiler-augmented. Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already 2-3x faster than the current non-compiled Virtual DOM libraries.
+Check out the current effort at [**✦ Million.js**](https://github.com/aidenybai/million). We're already [**2-3x faster**](https://millionjs.org/benchmarks/official-benchmarks) than the current non-compiled Virtual DOM libraries.
