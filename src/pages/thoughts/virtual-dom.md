@@ -7,6 +7,20 @@ layout: ../../layouts/Layout.astro
 
 > _**Plug**: I help develop [**✦ Million.js**](https://github.com/aidenybai/million): Virtual DOM into the future! 💥🦁✨_
 
+### Table of Contents
+
+- [Introduction](#introduction)
+- [Declarative UI _(in the past)_](#declarative-ui-in-the-past)
+- [Imperative UI](#imperative-ui)
+- [Understanding Virtual DOM _(part 1)_](#understanding-virtual-dom-part-1)
+- [Build Your Own Virtual DOM _(part 2)_](#build-your-own-virtual-dom-part-2)
+  - [`m(tag, props, children)`](#mtag-props-children)
+  - [`createElement(vnode)`](#createlementvnode)
+  - [`patch(el, newVNode, oldVNode)`](#patchel-newvnode-oldvnode)
+- [Virtual DOM is Pure Overhead _(right now)_](#virtual-dom-is-pure-overhead-right-now)
+- [Future of Virtual DOM](#future-of-virtual-dom)
+- [✦ Million.js](#-millionjs)
+
 ### Introduction
 
 The Virtual DOM was initially pioneered by the [React](https://reactjs.org/) authors to make [declarative](https://stackoverflow.com/questions/1784664/what-is-the-difference-between-declarative-and-imperative-paradigm-in-programming) UI faster to render. To understand why declarative UI was originally so slow, we first need to understand how declarative UI was done in the past.
