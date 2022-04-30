@@ -43,7 +43,7 @@ The inefficiency stems from the parsing, destruction and reconstruction of the U
 3. Insert the tree of DOM nodes into the `<body>` element.
 4. Perform [layout calculation and repaint](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg) the screen.
 
-This process is extremely computationally expensive and can cause render speeds to slow down signifcantly.
+This process is extremely computationally expensive and can cause render speeds to slow down significantly.
 
 ### Imperative UI
 
@@ -55,7 +55,7 @@ div.textContent = 'Hello World!';
 document.body.appendChild(div);
 ```
 
-However, we can recognize this can be cumbersome to write manually, especially when there is a lot of interativity in the UI, as we need to specify every step imperatively. It is much more elegant to write UI declaratively.
+However, we can recognize this can be cumbersome to write manually, especially when there is a lot of interactivity in the UI, as we need to specify every step imperatively. It is much more elegant to write UI declaratively.
 
 > **TL;DR**: The React authors created Virtual DOM to allow us to write UI in a way that is faster to render than `innerHTML` and just as declarative.
 
@@ -63,7 +63,7 @@ However, we can recognize this can be cumbersome to write manually, especially w
 
 To best understand how Virtual DOM works, let's overview the process and then build an example.
 
-The Virtual DOM is an method of rendering UI. The method utilizes a tree of JavaScript objects ("virtual" nodes) that mimics the DOM tree.
+The Virtual DOM is a method of rendering UI. The method utilizes a tree of JavaScript objects ("virtual" nodes) that mimics the DOM tree.
 
 ```js
 // <div>Hello World!</div>
