@@ -16,22 +16,18 @@ const posts = await Astro.glob('./*.md')
       return 0;
     })
   );
-const date = new Date();
-const oneDay = 24 * 60 * 60 * 1000;
 ---
 
 <Layout content={{ title: 'Thoughts 想法' }}>
   A collection of my ramblings and musings fused into one place.
   {posts.map(post => {
-    const diff = Math.round(Math.abs(date.getTime() - post.date.getTime()) / oneDay);
-    const timescale = diff < 1 ? 'today' : diff < 2 ? 'yesterday' : diff + ' days ago';
     return (
       <div>
         <h3>
           <a href={post.href}>{post.title}</a>
         </h3>
         <p>
-          {post.description} <em class="fade" title={date.toLocaleDateString()}>({timescale})</em>
+          {post.description} <em class="fade">({post.date.toLocaleDateString()})</em>
         </p>
       </div>
     );

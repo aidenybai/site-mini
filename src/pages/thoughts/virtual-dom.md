@@ -1,6 +1,6 @@
 ---
-title: 'The Past, Present, and Future of Virtual DOM'
-description: 'What is the Virtual DOM? Why does it exist? What are its advantages? What will we see in the next 5 years?'
+title: 'Making the Virtual DOM. Faster.'
+description: "Million.js leverages new techniques like compiliation to advance the Virtual DOM into the new generation of web applications"
 date: 'April 20, 2022'
 layout: ../../layouts/Layout.astro
 ---
