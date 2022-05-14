@@ -1,13 +1,16 @@
 import { createSignal } from 'solid-js';
 
-export default function Age({ init }) {
+export default function Age() {
   const BIRTHDAY = new Date('January 5, 2005').getTime();
-  const [age, setAge] = createSignal(init);
+  const calc = () => {
+    const diff = new Date().getTime() - BIRTHDAY;
+    return (diff / 1000 / 60 / 60 / 24 / 365).toFixed(9);
+  };
+  const [age, setAge] = createSignal(calc());
   const [currInterval, setCurrInterval] = createSignal(null);
   const createInterval = () => {
     return setInterval(() => {
-      const diff = new Date().getTime() - BIRTHDAY;
-      setAge((diff / 1000 / 60 / 60 / 24 / 365).toFixed(9));
+      setAge(calc());
     }, 10);
   };
   setCurrInterval(createInterval());

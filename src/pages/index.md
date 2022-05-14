@@ -6,7 +6,7 @@ img: '/img/favicon.png'
 layout: ../layouts/Layout.astro
 ---
 
-**◕ ◡ ◕ っ** Hi, I'm Aiden! I'm a <Age init={17} client:visible /> y/o from
+**◕ ◡ ◕ っ** Hi, I'm Aiden! I'm a <Age client:visible /> y/o from
 Washington State passionate about **HCI research** and
 open source.
 
@@ -29,6 +29,6 @@ I pioneered [**KBowl**](https://kbowl.aidenybai.com) (virtual [Knowledge Bowl](h
 **30+ schools, 40+ teachers and 1k+ students** throughout
 2020 and 2021.
 
-## More
+### More
 
 I like blasting music with my windows down on the highway, chugging fruit tea boba, and composing my [**thoughts**](/thoughts) in my free time.
