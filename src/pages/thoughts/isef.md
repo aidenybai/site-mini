@@ -29,7 +29,7 @@ The point? **Seek opportunities, work hard, and learn from failure**. Nothing is
 
 ### #2: Research is unfair
 
-Most ISEF projects are boring. Not that I hate machine learning or a novel method of diagnosing cancer, but when you see those same exact keywords copied and pasted over and over again, it gets exhausting.
+Many ISEF projects are uncreative. Not that I hate machine learning or a novel method of diagnosing cancer, but when you see those same exact keywords copied and pasted over and over again, it gets exhausting.
 
 > <ResearchProjectName client:idle /> (click to generate new name)
 
@@ -37,7 +37,7 @@ Why do we see so many “buzzword-y” research projects come up? It all fundame
 
 Mentor support is intended to be a positive force that improves accessibility in research for high schoolers. But more recently, it’s evolved into a black box system in which connections and networking matter more than merit or passion.
 
-The most egregious offenders are research organizations designed to collect payment from parents who force their unwilling children into these programs. Once they enter, they are forced into an accelerated curriculum that virtually completes most of the intellectual and inherently difficult aspects of research for them. These fraudulently created projects are then propelled into competitions like ISEF to compete with researchers that don’t have access to the same resources.
+The most egregious offenders are research organizations designed to collect payment from parents who force their unwilling children into these programs for college admissions and resume padding. Once they enter, they are forced into an accelerated curriculum that virtually completes most of the intellectual and inherently difficult aspects of research for them. These fraudulently created projects are then propelled into competitions like ISEF to compete with researchers that don’t have access to the same resources.
 
 This produces a monoculture of similarly boring projects, where fraudulently created projects set the meta by performing well at research fairs, resulting in more experienced students unwittingly committing to the new meta, and newcomers to be drowned out.
 
@@ -54,6 +54,10 @@ Research for the sake of research is fun, there’s no doubt about it. But if th
 It's often easy to lose sight of the principles that form successful ISEF projects. The best way to follow these principles is to surround yourself with a support group that can help you succeed. Whether that be a friend, an (_ethical_) mentor, or a group of friends, a support group is integral to keep you motivated and on track to your goals.
 
 ### Final comments
+
+My rhetoric may be somewhat discouraging or overly pessimistic. Let me clarify: ISEF is an amazing opportunity. Without ISEF, I wouldn't be able to translate my research into tangible value and make it a reality. I'm inspired by all ISEF projects and it makes me genuinely happy to see so many people participate.
+
+I'd like to personally thank Society for Science for hosting ISEF, my parents and relatives for providing important feedback and guidance, and all the supporters I've had on the way.
 
 I hope this article found some value to you. If you're currently looking to compete in ISEF, I encourage you on your journey to learn more about the research process and impact the future of our society.
 
