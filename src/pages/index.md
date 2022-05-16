@@ -2,7 +2,6 @@
 setup: |
   import Age from '../components/Age.jsx';
 title: 'Aiden Bai 白宇彤'
-img: '/img/favicon.png'
 layout: ../layouts/Layout.astro
 ---
 
