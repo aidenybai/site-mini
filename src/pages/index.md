@@ -16,7 +16,6 @@ open source.
 Right now, I'm exploring **next generation** user interfaces with
 [**✦ Million.js**](https://millionjs.org/), which won **3rd place** grand award in Systems Software at [ISEF 2022](https://www.societyforscience.org/press-release/regeneron-isef-full-awards-2022/#:~:text=SOFT037).
 
-In the summer of 2022, I'll be interning at [**Wyze Labs**](https://www.wyze.com) to wise up the [Wyze Cam](https://www.youtube.com/watch?v=AbFAU7SMDSE).
 
 ### Previously
 
