@@ -9,7 +9,7 @@ layout: ../layouts/Layout.astro
 Washington State passionate about **HCI research** and
 open source.
 
-[**Thoughts**](/thoughts) · [**Email**](mailto:aiden.bai05@gmail.com) · [**GitHub**](https://github.com/aidenybai) · [**LinkedIn**](https://linkedin.com/in/aidenbai) · [**Resume**](https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1)
+[**Thoughts**](/thoughts) · [**Email**](mailto:aiden.bai05@gmail.com) · [**GitHub**](https://github.com/aidenybai) · [**Twitter**](https://twitter.com/aidenybai) · [**LinkedIn**](https://linkedin.com/in/aidenbai) · [**Resume**](https://www.figma.com/file/n4MkGYBP1CEc3LsXU9z1pT/Resume?node-id=0%3A1)
 
 ### Present
 
