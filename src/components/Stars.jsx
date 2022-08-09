@@ -18,7 +18,7 @@ export default function Stars() {
       {data.loading || data.error ? (
         <span class="blur">{stargazers_count}</span>
       ) : (
-        data()?.stargazers_count
+        data()?.stargazers_count ?? stargazers_count
       )}{' '}
       ★)
     </em>
