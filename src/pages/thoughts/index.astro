@@ -2,7 +2,7 @@
 import { parse, isBefore } from 'date-fns';
 import Layout from '../../layouts/Layout.astro';
 
-const posts = await Astro.glob('./*.md')
+const posts = await Astro.glob('./*.md*')
   .then(posts => posts
     .map(({ frontmatter, url }) => ({
       title: frontmatter.title,
@@ -18,7 +18,7 @@ const posts = await Astro.glob('./*.md')
   );
 ---
 
-<Layout content={{ title: 'Thoughts 想法' }}>
+<Layout content={{ title: 'Thoughts' }}>
   A collection of my ramblings and musings fused into one place.
   {posts.map(post => {
     return (

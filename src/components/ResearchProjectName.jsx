@@ -39,11 +39,18 @@ export default function ResearchProjectName() {
     ];
     const getWord = () =>
       word[Math.floor(Math.random() * word.length)];
-    const sentenceArray = [...new Set(new Array(7).fill(0).map(getWord))];
+    const sentenceArray = [
+      ...new Set(new Array(7).fill(0).map(getWord)),
+    ];
     return `"${sentenceArray.join(' ')}"`;
   };
   const [name, setName] = createSignal(getName());
+  const handleClick = () => setName(getName());
   return (
-    <strong onClick={() => setName(getName())}>{name()}</strong>
+    <>
+      <strong onMouseOver={handleClick} onClick={handleClick}>
+        {name()}
+      </strong>
+    </>
   );
 }

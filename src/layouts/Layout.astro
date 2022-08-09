@@ -13,12 +13,9 @@ const { content } = Astro.props;
     />
     <meta name="author" content="Aiden Bai" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@300;400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon.png" />
     <style is:global>
       @import "../styles/global.css";
@@ -27,6 +24,7 @@ const { content } = Astro.props;
     <title>{content.title}</title>
   </head>
   <body>
+    <div class="glow"></div>
     <div class="container">
       <h2 class="header">
         <a href="/" class="headshot">
