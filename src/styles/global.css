@@ -33,6 +33,10 @@ body {
   color: var(--main);
 }
 
+.blur {
+  filter: blur(0.2rem);
+}
+
 .glow {
   position: absolute;
   left: 0;

@@ -15,9 +15,11 @@ export default function Stars() {
     <em>
       {' '}
       (
-      {data.loading || data.error
-        ? stargazers_count
-        : data()?.stargazers_count}{' '}
+      {data.loading || data.error ? (
+        <span class="blur">{stargazers_count}</span>
+      ) : (
+        data()?.stargazers_count
+      )}{' '}
       ★)
     </em>
   );
