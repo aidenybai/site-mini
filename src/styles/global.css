@@ -16,7 +16,7 @@
 
 ::selection {
   background: var(--highlight);
-  color: #000;
+  color: #fff;
 }
 
 html {
@@ -54,7 +54,7 @@ body {
     #ff5335 301.88deg,
     #691eff 360deg
   );
-  filter: blur(160px);
+  filter: blur(15rem);
   z-index: -1;
 }
 
